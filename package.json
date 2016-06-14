@@ -1,0 +1,35 @@
+{
+  "name": "json-func",
+  "version": "1.0.0",
+  "description": "Lets you turn JSON into asynchronous api objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arupex/json-func.git"
+  },
+  "keywords": [
+    "json",
+    "func",
+    "function",
+    "functional",
+    "implementation",
+    "async",
+    "mock",
+    "mocking"
+  ],
+  "author": "dirwin517",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arupex/json-func/issues"
+  },
+  "homepage": "https://github.com/arupex/json-func#readme",
+  "dependencies": {
+    "deep-value": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert-diff": "^1.0.1"
+  }
+}
