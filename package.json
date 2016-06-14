@@ -30,6 +30,7 @@
     "deep-value": "^1.0.0"
   },
   "devDependencies": {
-    "assert-diff": "^1.0.1"
+    "assert-diff": "^1.0.1",
+    "mocha": "^2.5.3"
   }
 }
