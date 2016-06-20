@@ -67,3 +67,56 @@
 #Feel free to check out test/test.js for more examples
 
     Beware of nested callbacks #testinglazy
+
+
+#Additional Usage - Note binding call1!
+
+
+    var jsonFunc = require('json-func');
+
+    var mockData = {
+        service1 : {
+            call1 : {
+                data : 'hello from service1 call1',
+                error : 'im going to do an error instead!'
+            },
+            call2: {
+                data : 'hello from service1 call2'
+            }
+        },
+        service2 : {
+            call1 : {
+                data : 'hello from service2 call1'
+            },
+            call2 : {
+                data : 'hello from service2 call2'
+            }
+        }
+    };
+
+    var mock = jsonFunc(mockData, {
+      bindings : {
+        'getAll'    : { data : 'service1.call1.data', error : 'service1.call1.error'},
+        'addOne'    : 'service1.call2.data',
+        'deleteIt'  : 'service2.call1.data',
+        'updateOne' : 'service2.call2.data'
+      },
+      async : true,
+      callbacks : true,
+      includeOptionArg : true,
+      errOption : true
+    });
+
+#Now if you call getAll youll get an error back, in all methods/paradigms
+
+    //fail callback
+    getAll(function successcallback(){}, function failcallback(){})
+
+    //with options
+    getAll({}, function successcallback(){}, function failcallback(){})
+
+    //err parameter
+    getAll(function callback(err, data){})
+
+    //with options
+    getAll({}, function callback(err, data){})
