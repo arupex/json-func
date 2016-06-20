@@ -1,6 +1,6 @@
 {
   "name": "json-func",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lets you turn JSON into asynchronous api objects",
   "main": "index.js",
   "scripts": {
